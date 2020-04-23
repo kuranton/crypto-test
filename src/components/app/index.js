@@ -1,10 +1,6 @@
-import React, {Component} from 'react'
-import './app.sass'
+import React from 'react'
+import { hot } from 'react-hot-loader/root'
 
-export default class App extends Component {
-  render() {
-    return(
-      <div styleName='app'>Hello</div>
-    )
-  }
-}
+const App = () => <div>Hey</div>
+
+export default hot(App)
