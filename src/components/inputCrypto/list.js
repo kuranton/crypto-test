@@ -1,20 +1,16 @@
-import React, {useEffect} from 'react'
-import {useSelector} from 'react-redux'
+import React from 'react'
 
 import Item from './listItem'
 
 import './list.sass'
 
-const List = ({type, toggleExpand}) => {
-  const currencies = useSelector(state => state.currencies)
+const List = ({type, toggleExpand, currencies}) => (
+  <ul styleName='list'>
+    {currencies.map(currency =>
+      <Item currency={currency} type={type} toggleExpand={toggleExpand} key={currency.symbol}/>)
+    }
+  </ul>
+)
 
-  return(
-    <ul styleName='list'>
-      {currencies.map(currency =>
-        <Item currency={currency} type={type} toggleExpand={toggleExpand} key={currency.symbol}/>)
-      }
-    </ul>
-  )
-}
 
 export default List
