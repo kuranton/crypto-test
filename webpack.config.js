@@ -34,6 +34,11 @@ module.exports = {
     hot: true,
     port: 8000
   },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
   module: {
     rules: [js, sass]
   },

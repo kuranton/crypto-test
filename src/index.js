@@ -24,7 +24,7 @@ if (module.hot) {
 }
 
 import {fetchCurrencies} from './actions'
-store.dispatch(fetchCurrencies()).then(()=>console.log(store.getState()))
+store.dispatch(fetchCurrencies())
 
 ReactDOM.render(
   <Provider store={store}>
